@@ -44,7 +44,7 @@
 <script>
     function validarNumeros(event) {
         var charCode = (event.which) ? event.which : event.keyCode;
-        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        if ((charCode < 48 || charCode > 57) && charCode !== 32)) {
             event.preventDefault();
         }
     }

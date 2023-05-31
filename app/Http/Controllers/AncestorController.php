@@ -16,8 +16,9 @@ class AncestorController extends Controller
                 return "Yes";
             }
             if(array_key_exists($u, $tree)){
-                $clave = $tree[$u][0];
-                return validar($tree, $clave, $v);
+                foreach($tree[$u] as $clave){
+                    return validar($tree, $clave, $v);
+                }
             }
             return "No";
         }
